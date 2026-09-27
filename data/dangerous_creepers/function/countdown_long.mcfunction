@@ -1,0 +1,2 @@
+schedule function dangerous_creepers:countdown_long 10s
+execute as @e[tag=dangerous_creepers.held,type=tnt,tag=!dangerous_creepers.fused,tag=dangerous_creepers.dangerous] run data modify entity @s fuse set value -1000000000

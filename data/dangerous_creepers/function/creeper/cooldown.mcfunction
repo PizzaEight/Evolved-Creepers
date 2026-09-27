@@ -1,0 +1,3 @@
+execute as @s[tag=dangerous_creepers.threw] unless score @s dangerous_creepers.cooldown matches 45 run scoreboard players add @s dangerous_creepers.cooldown 1
+execute as @s[scores={dangerous_creepers.cooldown=45},tag=dangerous_creepers.threw] at @s run function dangerous_creepers:creeper/restore
+execute as @s[nbt={powered:1b},tag=!dangerous_creepers.charged,tag=dangerous_creepers.dangerous] at @s run function dangerous_creepers:creeper/enpower

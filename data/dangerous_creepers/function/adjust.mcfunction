@@ -1,0 +1,19 @@
+tellraw @a {bold:true,color:dark_red,text:"Dangerous Creepers 1.0 Loaded"}
+tellraw @a {color:gold,text:"====================================================="}
+tellraw @a {bold:true,color:dark_green,text:"Evolved Creeper Spawn Frequency:\n"}
+execute unless score dangerous_creepers.config dangerous_creepers.chance matches 0 run tellraw @a {"click_event":{"action":"run_command","command":"/function dangerous_creepers:rare"},"hover_event":{"action":"show_text","value":[{"text":"Click to select: "},{"color":"aqua","text":"Rare"}]},color:green,text:"[Rare]"}
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 0 run tellraw @a [{bold:false,color:green,text:"[Rare]"},{bold:true,color:gold,text:" <"},{color:gold,text:" Selected"}]
+tellraw @a {bold:false,color:gray,text:"Evolved Creeper replace 5% of Creepers\n"}
+execute unless score dangerous_creepers.config dangerous_creepers.chance matches 1 run tellraw @a {"click_event":{"action":"run_command","command":"/function dangerous_creepers:medium"},"hover_event":{"action":"show_text","value":[{"text":"Click to select: "},{"color":"aqua","text":"Medium"}]},color:green,text:"[Medium]"}
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 1 run tellraw @a [{bold:false,color:green,text:"[Medium]"},{bold:true,color:gold,text:" <"},{color:gold,text:" Selected"}]
+tellraw @a {bold:false,color:gray,text:"Evolved Creeper replace 20% of Creepers\n"}
+execute unless score dangerous_creepers.config dangerous_creepers.chance matches 2 run tellraw @a {"click_event":{"action":"run_command","command":"/function dangerous_creepers:always"},"hover_event":{"action":"show_text","value":[{"text":"Click to select: "},{"color":"aqua","text":"Always"}]},color:green,text:"[Always]"}
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 2 run tellraw @a [{bold:false,color:green,text:"[Always]"},{bold:true,color:gold,text:" <"},{color:gold,text:" Selected"}]
+tellraw @a {bold:false,color:gray,text:"Evolved Creeper replace 100% of Creepers\n"}
+execute unless score dangerous_creepers.config dangerous_creepers.chance matches 3 run tellraw @a {"click_event":{"action":"run_command","command":"/function dangerous_creepers:increase_over_time_fast"},"hover_event":{"action":"show_text","value":[{"text":"Click to select: "},{"color":"aqua","text":"Increase Every Minute"}]},color:green,text:"[Increase Every Minute]"}
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 3 run tellraw @a [{bold:false,color:green,text:"[Increase Every Minute]"},{bold:true,color:gold,text:" <"},{color:gold,text:" Selected"}]
+tellraw @a {bold:false,color:gray,text:"Evolved Creeper chance increases by 1% every minute\n"}
+execute unless score dangerous_creepers.config dangerous_creepers.chance matches 4 run tellraw @a {"click_event":{"action":"run_command","command":"/function dangerous_creepers:increase_over_time_slow"},"hover_event":{"action":"show_text","value":[{"text":"Click to select: "},{"color":"aqua","text":"Increase Every 10 Minutes"}]},color:green,text:"[Increase Every 10 Minutes]"}
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 4 run tellraw @a [{bold:false,color:green,text:"[Increase Every 10 Minutes]"},{bold:true,color:gold,text:" <"},{color:gold,text:" Selected"}]
+tellraw @a {bold:false,color:gray,text:"Evolved Creeper chance increases by 1% every 10 minutes\n"}
+tellraw @a [{bold:false,color:yellow,text:"Type: "},{bold:false,color:white,italic:false,text:"/function dangerous_creepers:adjust"},{bold:false,color:yellow,text:" for this screen"}]

@@ -1,0 +1,2 @@
+scoreboard players set dangerous_creepers.config dangerous_creepers.chance 2
+function dangerous_creepers:adjust

@@ -1,0 +1,3 @@
+execute as @e[type=creeper,tag=!dangerous_creepers.fixed] run function dangerous_creepers:fix_mob
+execute as @e[tag=dangerous_creepers.prop,tag=!dangerous_creepers.2,tag=!dangerous_creepers.3,tag=!dangerous_creepers.4] at @s unless predicate dangerous_creepers:alive_passenger run function dangerous_creepers:remove_entity
+execute as @e[type=tnt,tag=dangerous_creepers.creeper_tnt,nbt={OnGround:1b}] run data modify entity @s fuse set value 0

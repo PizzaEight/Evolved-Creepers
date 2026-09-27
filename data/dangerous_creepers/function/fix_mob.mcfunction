@@ -1,0 +1,8 @@
+tag @s add dangerous_creepers.fixed
+execute store result score dangerous_creepers.config dangerous_creepers.random_chance run random value 1..100
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 0 if score dangerous_creepers.config dangerous_creepers.random_chance matches ..5 at @s[type=creeper] run return run function dangerous_creepers:creeper/main
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 1 if score dangerous_creepers.config dangerous_creepers.random_chance matches ..20 at @s[type=creeper] run return run function dangerous_creepers:creeper/main
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 2 at @s[type=creeper] run return run function dangerous_creepers:creeper/main
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 3 store result storage dangerous_creepers:chance chance int 1 run scoreboard players get dangerous_creepers.config dangerous_creepers.increasing_chance
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 3 store result storage dangerous_creepers:chance charged_chance int 1 run scoreboard players get dangerous_creepers.config dangerous_creepers.increasing_charged_chance
+execute if score dangerous_creepers.config dangerous_creepers.chance matches 3 at @s[type=creeper] run function dangerous_creepers:creeper/spawn_chance with storage dangerous_creepers:chance

@@ -1,0 +1,3 @@
+schedule function dangerous_creepers:countdown_5_min 5s
+execute at @e[type=creeper,tag=dangerous_creepers.threw,tag=dangerous_creepers.dangerous] unless predicate dangerous_creepers:has_passenger run particle smoke ~ ~0.3 ~ 0.25 0.6 0.25 0 40
+execute at @e[type=creeper,tag=dangerous_creepers.threw,tag=dangerous_creepers.dangerous] unless predicate dangerous_creepers:has_passenger run playsound minecraft:entity.creeper.hurt hostile @a ~ ~ ~ 0.5 1.4

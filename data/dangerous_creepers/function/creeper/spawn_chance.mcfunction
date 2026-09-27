@@ -1,0 +1,3 @@
+$execute if score dangerous_creepers.config dangerous_creepers.chance matches 3 if score dangerous_creepers.config dangerous_creepers.random_chance matches ..$(chance) at @s[type=creeper] run function dangerous_creepers:creeper/main
+
+$execute if score dangerous_creepers.config dangerous_creepers.chance matches 3 if score dangerous_creepers.config dangerous_creepers.random_chance matches ..$(charged_chance) at @s[type=creeper,tag=dangerous_creepers.dangerous] run function dangerous_creepers:creeper/enpower

@@ -1,0 +1,1 @@
+execute at @s[type=creeper,tag=dangerous_creepers.dangerous,tag=!dangerous_creepers.threw] if entity @s positioned ^ ^ ^-1 facing entity @p eyes positioned ^ ^ ^1 if entity @s[distance=0..1] run function dangerous_creepers:creeper/throw_tnt
